@@ -49,7 +49,7 @@ export default function ArtistPage({ artist, artworks }) {
   return (
     <div>
       <Head>
-        <title>{artist.name} - Underground Gallery</title>
+        <title>{`${artworks.name} - Underground Gallery`}</title>
       </Head>
       <Navbar />
       <main>

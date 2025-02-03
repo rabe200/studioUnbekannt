@@ -1,7 +1,6 @@
+// pages/_app.js
 import "../globals.css"; // Ensure this path is correct
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
-
-export default MyApp;
