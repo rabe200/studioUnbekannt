@@ -14,8 +14,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const filePath = path.join(process.cwd(), "data.json");
-  const jsonData = JSON.parse(fs.readFileSync(filePath, "utf8"));
+  const jsonData = require("../../data.json"); // Adjust path as needed
+
   const exhibition = jsonData.exhibitions.find(
     (exhibition) => exhibition.slug === params.slug
   );
@@ -33,7 +33,9 @@ export default function ExhibitionPage({ exhibition }) {
   return (
     <div>
       <Head>
-        <title>{exhibition.title} - Underground Gallery</title>
+        <Head>
+          <title>{`${exhibition.title} - Underground Gallery`}</title>
+        </Head>
       </Head>
       <Navbar />
       <main>

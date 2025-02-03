@@ -1,8 +1,6 @@
 // pages/artworks/index.js
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
-import fs from "fs";
-import path from "path";
 import styled from "styled-components";
 
 const GridContainer = styled.div`
@@ -20,8 +18,8 @@ const ArtworkCard = styled.div`
 `;
 
 export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), "data.json");
-  const jsonData = JSON.parse(fs.readFileSync(filePath, "utf8"));
+  const jsonData = require("../../data.json"); // Adjust path as needed
+
   return { props: { artworks: jsonData.artworks } };
 }
 

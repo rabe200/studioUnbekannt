@@ -13,8 +13,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const filePath = path.join(process.cwd(), "data.json");
-  const jsonData = JSON.parse(fs.readFileSync(filePath, "utf8"));
+  const jsonData = require("../../data.json"); // Adjust path as needed
+
   const artwork = jsonData.artworks.find(
     (artwork) => artwork.slug === params.slug
   );
@@ -32,7 +32,9 @@ export default function ArtworkPage({ artwork }) {
   return (
     <div>
       <Head>
-        <title>{artwork.name} - Underground Gallery</title>
+        <Head>
+          <title>{`${artwork.name} - Underground Gallery`}</title>
+        </Head>
       </Head>
       <Navbar />
       <main>

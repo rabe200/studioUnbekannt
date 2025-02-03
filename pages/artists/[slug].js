@@ -29,8 +29,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const filePath = path.join(process.cwd(), "data.json");
-  const jsonData = JSON.parse(fs.readFileSync(filePath, "utf8"));
+  const jsonData = require("../../data.json");
+
   const artist = jsonData.artists.find((artist) => artist.slug === params.slug);
   const artworks = jsonData.artworks.filter(
     (artwork) => artwork.artist === artist.name

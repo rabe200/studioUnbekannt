@@ -1,12 +1,10 @@
 // pages/artists/index.js
 import Head from "next/head";
 import Navbar from "../../components/Navbar";
-import fs from "fs";
-import path from "path";
 
 export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), "data.json");
-  const jsonData = JSON.parse(fs.readFileSync(filePath, "utf8"));
+  const jsonData = require("../../data.json"); // Adjust path as needed
+
   return { props: { artists: jsonData.artists } };
 }
 
