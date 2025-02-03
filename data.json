@@ -1,0 +1,70 @@
+{
+  "exhibitions": [
+    {
+      "id": "1",
+      "title": "Hidden Narratives",
+      "slug": "hidden-narratives",
+      "description": "An exhibition exploring unseen stories.",
+      "date": "2025-06-10"
+    },
+    {
+      "id": "2",
+      "title": "Shadow and Light",
+      "slug": "shadow-and-light",
+      "description": "The interplay between darkness and illumination.",
+      "date": "2025-04-22"
+    }
+  ],
+  "artists": [
+    {
+      "id": "1",
+      "name": "Alex Noir",
+      "slug": "alex-noir",
+      "bio": "Alex Noir is a contemporary artist known for his dark and surreal compositions.",
+      "artworks": ["101", "102"]
+    },
+    {
+      "id": "2",
+      "name": "Mia Solis",
+      "slug": "mia-solis",
+      "bio": "Mia Solis blends light and shadow to create immersive dreamlike landscapes.",
+      "artworks": ["103"]
+    },
+    {
+      "id": "3",
+      "name": "Jordan Vega",
+      "slug": "jordan-vega",
+      "bio": "Jordan Vega experiments with textures and digital distortions to push artistic boundaries.",
+      "artworks": ["104", "105"]
+    }
+  ],
+  "artworks": [
+    {
+      "id": "101",
+      "name": "Echoes of the Past",
+      "slug": "echoes-of-the-past",
+      "artist": "Alex Noir",
+      "year": 2024,
+      "technique": "Oil on Canvas",
+      "price": "€2,500"
+    },
+    {
+      "id": "102",
+      "name": "Concrete Dreams",
+      "slug": "concrete-dreams",
+      "artist": "Alex Noir",
+      "year": 2023,
+      "technique": "Mixed Media",
+      "price": "€1,800"
+    },
+    {
+      "id": "103",
+      "name": "Concrete Fumble",
+      "slug": "concrete-fumble",
+      "artist": "Roger Morris",
+      "year": 2024,
+      "technique": "Mixed Media",
+      "price": "€1,800"
+    }
+  ]
+}
