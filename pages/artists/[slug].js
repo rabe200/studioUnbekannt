@@ -19,6 +19,9 @@ export async function getStaticProps({ params }) {
   const artworks = jsonData.artworks.filter(
     (artwork) => artwork.artist === artist.name
   );
+  const exhibitions = jsonData.exhibitions.filter(
+    (exhibition) => exhibition.slug === artist.exhibition
+  );
 
   if (!artist) {
     return {
@@ -26,7 +29,7 @@ export async function getStaticProps({ params }) {
     };
   }
 
-  return { props: { artist, artworks } };
+  return { props: { artist, artworks, exhibitions } };
 }
 
 const GridContainer = styled.div`
@@ -43,7 +46,7 @@ const ArtworkCard = styled.div`
   text-align: center;
 `;
 
-export default function ArtistPage({ artist, artworks }) {
+export default function ArtistPage({ artist, artworks, exhibitions }) {
   return (
     <>
       <Head>
@@ -63,6 +66,22 @@ export default function ArtistPage({ artist, artworks }) {
             {artist.instagram}
           </Link>
         </p>
+      )}
+
+      {/* Render Exhibitions */}
+      {exhibitions.length > 0 && (
+        <>
+          <h3>Exhibitions</h3>
+          <ul>
+            {exhibitions.map((exhibition) => (
+              <li key={exhibition.id}>
+                <Link href={`/exhibitions/${exhibition.slug}`}>
+                  {exhibition.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </>
       )}
 
       <h3>Artworks</h3>
