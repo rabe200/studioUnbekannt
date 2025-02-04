@@ -100,12 +100,13 @@
     },
     {
       "id": "10",
-      "name": "Achim",
-      "slug": "achim",
+      "name": "Achim Saar",
+      "slug": "achim-saar",
       "bio": "Achim crafts sculptures that blend industrial and organic elements.",
       "instagram": "@achimsaar",
       "exhibition": "knospen-und-beton",
-      "profilePicture": "/images/Achim/profilePicture.jpg"
+      "profilePicture": "/images/Achim_Saar/profilePicture.jpeg",
+      "statement": "Achim Saar is a mixed media artist interested in different materials. He also likes to combine things that have nothing in common."
     },
     {
       "id": "11",
