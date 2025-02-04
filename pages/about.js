@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Navbar from "@/components/Navbar";
 import styled from "styled-components";
 
 const Container = styled.main`
@@ -15,9 +14,8 @@ export default function About() {
   return (
     <div>
       <Head>
-        <title>About - Studio Unbekannt</title>
+        <title>About - STUDIO UNBEKANNT</title>
       </Head>
-      <Navbar />
       <Container>
         <h2>STUDIO UNBEKANNT</h2>
         <Section>

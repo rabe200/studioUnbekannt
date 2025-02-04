@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Navbar from "../../components/Navbar";
 import styled from "styled-components";
 import fs from "fs";
 import path from "path";
@@ -29,18 +28,6 @@ export async function getStaticProps({ params }) {
   return { props: { artist, artworks } };
 }
 
-const PageWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-`;
-
-const Container = styled.main`
-  flex: 1;
-  padding: 20px;
-  text-align: center;
-`;
-
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -57,34 +44,31 @@ const ArtworkCard = styled.div`
 
 export default function ArtistPage({ artist, artworks }) {
   return (
-    <PageWrapper>
+    <>
       <Head>
-        <title>{`${artist.name} - Underground Gallery`}</title>
+        <title>{`${artist.name} - STUDIO UNBEKANNT`}</title>
       </Head>
-      <Navbar />
-      <Container>
-        <h2>{artist.name}</h2>
-        <p>{artist.bio}</p>
-        <h3>Artworks</h3>
-        <GridContainer>
-          {artworks.map((artwork) => (
-            <ArtworkCard key={artwork.id}>
-              <a href={`/artworks/${artwork.slug}`}>
-                <h3>{artwork.name}</h3>
-                <p>
-                  <strong>Year:</strong> {artwork.year}
-                </p>
-                <p>
-                  <strong>Technique:</strong> {artwork.technique}
-                </p>
-                <p>
-                  <strong>Price:</strong> {artwork.price}
-                </p>
-              </a>
-            </ArtworkCard>
-          ))}
-        </GridContainer>
-      </Container>
-    </PageWrapper>
+      <h2>{artist.name}</h2>
+      <p>{artist.bio}</p>
+      <h3>Artworks</h3>
+      <GridContainer>
+        {artworks.map((artwork) => (
+          <ArtworkCard key={artwork.id}>
+            <a href={`/artworks/${artwork.slug}`}>
+              <h3>{artwork.name}</h3>
+              <p>
+                <strong>Year:</strong> {artwork.year}
+              </p>
+              <p>
+                <strong>Technique:</strong> {artwork.technique}
+              </p>
+              <p>
+                <strong>Price:</strong> {artwork.price}
+              </p>
+            </a>
+          </ArtworkCard>
+        ))}
+      </GridContainer>
+    </>
   );
 }

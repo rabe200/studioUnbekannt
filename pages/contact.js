@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Navbar from "@/components/Navbar";
 import styled from "styled-components";
 
 const PageWrapper = styled.div`
@@ -18,9 +17,8 @@ export default function Contact() {
   return (
     <PageWrapper>
       <Head>
-        <title>Contact - Studio Unbekannt</title>
+        <title>Contact - STUDIO UNBEKANNT</title>
       </Head>
-      <Navbar />
       <Container>
         <h2>Contact Us</h2>
         <p>Get in touch with us for inquiries, collaborations, and more.</p>

@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Navbar from "../../components/Navbar";
 import styled from "styled-components";
 import fs from "fs";
 import path from "path";
@@ -28,18 +27,6 @@ export async function getStaticProps({ params }) {
   return { props: { artwork } };
 }
 
-const PageWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-`;
-
-const Container = styled.main`
-  flex: 1;
-  padding: 20px;
-  text-align: center;
-`;
-
 const ArtworkDetails = styled.div`
   background: #222;
   padding: 20px;
@@ -51,28 +38,25 @@ const ArtworkDetails = styled.div`
 
 export default function ArtworkPage({ artwork }) {
   return (
-    <PageWrapper>
+    <>
       <Head>
-        <title>{`${artwork.name} - Underground Gallery`}</title>
+        <title>{`${artwork.name} - STUDIO UNBEKANNT`}</title>
       </Head>
-      <Navbar />
-      <Container>
-        <h2>{artwork.name}</h2>
-        <ArtworkDetails>
-          <p>
-            <strong>Artist:</strong> {artwork.artist}
-          </p>
-          <p>
-            <strong>Year:</strong> {artwork.year}
-          </p>
-          <p>
-            <strong>Technique:</strong> {artwork.technique}
-          </p>
-          <p>
-            <strong>Price:</strong> {artwork.price}
-          </p>
-        </ArtworkDetails>
-      </Container>
-    </PageWrapper>
+      <h2>{artwork.name}</h2>
+      <ArtworkDetails>
+        <p>
+          <strong>Artist:</strong> {artwork.artist}
+        </p>
+        <p>
+          <strong>Year:</strong> {artwork.year}
+        </p>
+        <p>
+          <strong>Technique:</strong> {artwork.technique}
+        </p>
+        <p>
+          <strong>Price:</strong> {artwork.price}
+        </p>
+      </ArtworkDetails>
+    </>
   );
 }

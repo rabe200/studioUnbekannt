@@ -24,7 +24,7 @@ const NavLinks = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh; /* Make menu fill the full screen */
+    height: 100vh;
     background: #111;
     padding: 2rem;
     justify-content: center;

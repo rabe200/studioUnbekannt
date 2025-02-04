@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Navbar from "../../components/Navbar";
 import styled from "styled-components";
 import fs from "fs";
 import path from "path";
@@ -28,32 +27,17 @@ export async function getStaticProps({ params }) {
   return { props: { exhibition } };
 }
 
-const PageWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-`;
-
-const Container = styled.main`
-  flex: 1;
-  padding: 20px;
-  text-align: center;
-`;
-
 export default function ExhibitionPage({ exhibition }) {
   return (
-    <PageWrapper>
+    <>
       <Head>
-        <title>{`${exhibition.title} - Underground Gallery`}</title>
+        <title>{`${exhibition.title} - STUDIO UNBEKANNT`}</title>
       </Head>
-      <Navbar />
-      <Container>
-        <h2>{exhibition.title}</h2>
-        <p>{exhibition.description}</p>
-        <p>
-          <strong>Date:</strong> {exhibition.date}
-        </p>
-      </Container>
-    </PageWrapper>
+      <h2>{exhibition.title}</h2>
+      <p>{exhibition.description}</p>
+      <p>
+        <strong>Date:</strong> {exhibition.date}
+      </p>
+    </>
   );
 }
