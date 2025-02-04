@@ -5,12 +5,14 @@ import { FiMenu, FiX } from "react-icons/fi";
 import { useRouter } from "next/router";
 
 const Nav = styled.nav`
-  background: #111;
+  background: red;
   padding: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: relative;
+  text-align: center;
+  width: 100%;
 `;
 
 const NavLinks = styled.div`
@@ -32,10 +34,11 @@ const NavLinks = styled.div`
   }
 `;
 
-const NavLink = styled(Link)`
+const NavLink = styled.a`
   color: #fff;
   text-decoration: none;
   font-size: 1.5rem;
+  cursor: pointer;
 
   &:hover {
     color: #ffcc00;
@@ -61,17 +64,54 @@ export default function Navbar() {
     setIsOpen(false); // Close menu when navigating to a new page
   }, [router.pathname]);
 
+  const handleNavClick = (href) => {
+    if (router.pathname === href) {
+      router.replace(href); // Force reload the same page
+    }
+    setIsOpen(false); // Close the menu on any link click
+  };
+
   return (
     <Nav>
       <MenuIcon onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <FiX /> : <FiMenu />}
       </MenuIcon>
       <NavLinks isOpen={isOpen}>
-        <NavLink href="/about">About</NavLink>
-        <NavLink href="/exhibitions">Exhibitions</NavLink>
-        <NavLink href="/artists">Artists</NavLink>
-        <NavLink href="/artworks">Artworks</NavLink>
-        <NavLink href="/contact">Contact</NavLink>
+        <NavLink
+          onClick={() => handleNavClick("/about")}
+          as={Link}
+          href="/about"
+        >
+          About
+        </NavLink>
+        <NavLink
+          onClick={() => handleNavClick("/exhibitions")}
+          as={Link}
+          href="/exhibitions"
+        >
+          Exhibitions
+        </NavLink>
+        <NavLink
+          onClick={() => handleNavClick("/artists")}
+          as={Link}
+          href="/artists"
+        >
+          Artists
+        </NavLink>
+        <NavLink
+          onClick={() => handleNavClick("/artworks")}
+          as={Link}
+          href="/artworks"
+        >
+          Artworks
+        </NavLink>
+        <NavLink
+          onClick={() => handleNavClick("/contact")}
+          as={Link}
+          href="/contact"
+        >
+          Contact
+        </NavLink>
       </NavLinks>
     </Nav>
   );
