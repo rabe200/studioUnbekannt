@@ -2,6 +2,7 @@ import Head from "next/head";
 import styled from "styled-components";
 import fs from "fs";
 import path from "path";
+import Link from "next/link";
 
 export async function getStaticPaths() {
   const filePath = path.join(process.cwd(), "data.json");
@@ -50,6 +51,20 @@ export default function ArtistPage({ artist, artworks }) {
       </Head>
       <h2>{artist.name}</h2>
       <p>{artist.bio}</p>
+
+      {/* Render Instagram handle if available */}
+      {artist.instagram && (
+        <p>
+          <Link
+            href={`https://instagram.com/${artist.instagram.replace("@", "")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {artist.instagram}
+          </Link>
+        </p>
+      )}
+
       <h3>Artworks</h3>
       <GridContainer>
         {artworks.map((artwork) => (
