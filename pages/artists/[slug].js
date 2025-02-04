@@ -3,6 +3,7 @@ import styled from "styled-components";
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
+import Image from "next/image";
 
 export async function getStaticPaths() {
   const filePath = path.join(process.cwd(), "data.json");
@@ -46,6 +47,14 @@ const ArtworkCard = styled.div`
   text-align: center;
 `;
 
+const ProfileImage = styled.img`
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+`;
+
 export default function ArtistPage({ artist, artworks, exhibitions }) {
   return (
     <>
@@ -53,6 +62,12 @@ export default function ArtistPage({ artist, artworks, exhibitions }) {
         <title>{`${artist.name} - STUDIO UNBEKANNT`}</title>
       </Head>
       <h2>{artist.name}</h2>
+      {artist.profilePicture && (
+        <ProfileImage
+          src={artist.profilePicture}
+          alt={`${artist.name} profile`}
+        />
+      )}
       <p>{artist.bio}</p>
 
       {/* Render Instagram handle if available */}

@@ -21,7 +21,13 @@ export default function Contact() {
       </Head>
       <Container>
         <h2>Contact Us</h2>
+        <p>E-Mail: amedgd@gmail.com</p>
         <p>Get in touch with us for inquiries, collaborations, and more.</p>
+        <p>Phone: +4917695850157</p>
+        <p>
+          Instagram: @studio.unbekannt
+          (https://www.instagram.com/studiounbekannt/).
+        </p>
       </Container>
     </PageWrapper>
   );

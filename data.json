@@ -18,7 +18,8 @@
       "slug": "ame-dgd",
       "bio": "A Berlin-based painter exploring abstract and figurative forms.",
       "instagram": "@ame.dgd.art",
-      "exhibition": "knospen-und-beton"
+      "exhibition": "knospen-und-beton",
+      "profilePicture": "/images/Ame_Dgd/profilePicture.jpg"
     },
     {
       "id": "2",
@@ -26,7 +27,8 @@
       "slug": "marco-wachsmuth",
       "bio": "Marco Wachsmuth experiments with textures and colors to create expressive paintings.",
       "instagram": "@marco_wachsmuth",
-      "exhibition": "knospen-und-beton"
+      "exhibition": "knospen-und-beton",
+      "profilePicture": "/images/Marco Wachsmuth/profilePicture.jpg"
     },
     {
       "id": "3",
@@ -34,7 +36,8 @@
       "slug": "helena-leeners",
       "bio": "Helena Leeners blends movement and color in her vivid compositions.",
       "instagram": "@run.to.moon",
-      "exhibition": "knospen-und-beton"
+      "exhibition": "knospen-und-beton",
+      "profilePicture": "/images/Helena Leeners/profilePicture.jpg"
     },
     {
       "id": "4",
@@ -42,7 +45,8 @@
       "slug": "rachel-haase",
       "bio": "Rachel Haase’s works explore surreal and dreamy landscapes.",
       "instagram": "@rachelhaaze93",
-      "exhibition": "knospen-und-beton"
+      "exhibition": "knospen-und-beton",
+      "profilePicture": "/images/Rachel Haase/profilePicture.jpg"
     },
     {
       "id": "5",
@@ -50,7 +54,8 @@
       "slug": "chuuu",
       "bio": "Chuuu creates playful and evocative visual narratives through her paintings.",
       "instagram": "@chuuu_painter",
-      "exhibition": "knospen-und-beton"
+      "exhibition": "knospen-und-beton",
+      "profilePicture": "/images/Chuuu/profilePicture.jpg"
     },
     {
       "id": "6",
@@ -58,7 +63,8 @@
       "slug": "gina-donner",
       "bio": "Gina Donner focuses on abstract and intuitive painting techniques.",
       "instagram": "@gina.donner",
-      "exhibition": "knospen-und-beton"
+      "exhibition": "knospen-und-beton",
+      "profilePicture": "/images/Gina_Donner/profilePicture.jpeg"
     },
     {
       "id": "7",
@@ -66,15 +72,17 @@
       "slug": "lucas-fabian-oliviero",
       "bio": "Lucas Fabian Oliviero combines classical and modern techniques in his works.",
       "instagram": "@lufo.art",
-      "exhibition": "knospen-und-beton"
+      "exhibition": "knospen-und-beton",
+      "profilePicture": "/images/Lucas Fabian Oliviero/profilePicture.jpg"
     },
     {
       "id": "8",
-      "name": "Christian",
+      "name": "Rabentinte",
       "slug": "christian",
-      "bio": "Christian, known as Rabentinte, specializes in naive, surreal, and mystical art.",
+      "bio": "Christian Eickelberg, known as Rabentinte, specializes in naive, surreal, and mystical art.",
       "instagram": "@rabentinte",
-      "exhibition": "knospen-und-beton"
+      "exhibition": "knospen-und-beton",
+      "profilePicture": "/images/rabentinte/profilePicture.jpg"
     },
     {
       "id": "9",
@@ -82,7 +90,8 @@
       "slug": "vera-menold",
       "bio": "Vera Menold’s paintings depict dreamlike visions and abstract figures.",
       "instagram": "@vera.menold",
-      "exhibition": "knospen-und-beton"
+      "exhibition": "knospen-und-beton",
+      "profilePicture": "/images/Vera Menold/profilePicture.jpg"
     },
     {
       "id": "10",
@@ -90,7 +99,8 @@
       "slug": "achim",
       "bio": "Achim crafts sculptures that blend industrial and organic elements.",
       "instagram": "@achimsaar",
-      "exhibition": "knospen-und-beton"
+      "exhibition": "knospen-und-beton",
+      "profilePicture": "/images/Achim/profilePicture.jpg"
     },
     {
       "id": "11",
@@ -98,7 +108,8 @@
       "slug": "till-kraeusel",
       "bio": "Till Kräusel specializes in sculptural works that explore materiality and form.",
       "instagram": "@aeu_art_and_design",
-      "exhibition": "knospen-und-beton"
+      "exhibition": "knospen-und-beton",
+      "profilePicture": "/images/Till_Kraeusel/profilePicture.jpeg"
     }
   ],
   "artworks": [
