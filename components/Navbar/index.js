@@ -1,7 +1,8 @@
 import Link from "next/link";
 import styled from "styled-components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+import { useRouter } from "next/router";
 
 const Nav = styled.nav`
   background: #111;
@@ -20,18 +21,21 @@ const NavLinks = styled.div`
     display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
     flex-direction: column;
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
     width: 100%;
+    height: 100vh; /* Make menu fill the full screen */
     background: #111;
-    padding: 1rem;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
 const NavLink = styled(Link)`
   color: #fff;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 
   &:hover {
     color: #ffcc00;
@@ -51,6 +55,11 @@ const MenuIcon = styled.div`
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    setIsOpen(false); // Close menu when navigating to a new page
+  }, [router.pathname]);
 
   return (
     <Nav>

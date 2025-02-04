@@ -1,9 +1,45 @@
-// pages/artists/[slug].js
 import Head from "next/head";
 import Navbar from "../../components/Navbar";
+import styled from "styled-components";
 import fs from "fs";
 import path from "path";
-import styled from "styled-components";
+
+export async function getStaticPaths() {
+  const filePath = path.join(process.cwd(), "data.json");
+  const jsonData = JSON.parse(fs.readFileSync(filePath, "utf8"));
+  const paths = jsonData.artists.map((artist) => ({
+    params: { slug: artist.slug },
+  }));
+  return { paths, fallback: "blocking" };
+}
+
+export async function getStaticProps({ params }) {
+  const jsonData = require("../../data.json");
+  const artist = jsonData.artists.find((artist) => artist.slug === params.slug);
+  const artworks = jsonData.artworks.filter(
+    (artwork) => artwork.artist === artist.name
+  );
+
+  if (!artist) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return { props: { artist, artworks } };
+}
+
+const PageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+
+const Container = styled.main`
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+`;
 
 const GridContainer = styled.div`
   display: grid;
@@ -19,40 +55,14 @@ const ArtworkCard = styled.div`
   text-align: center;
 `;
 
-export async function getStaticPaths() {
-  const filePath = path.join(process.cwd(), "data.json");
-  const jsonData = JSON.parse(fs.readFileSync(filePath, "utf8"));
-  const paths = jsonData.artists.map((artist) => ({
-    params: { slug: artist.slug },
-  }));
-  return { paths, fallback: "blocking" };
-}
-
-export async function getStaticProps({ params }) {
-  const jsonData = require("../../data.json");
-
-  const artist = jsonData.artists.find((artist) => artist.slug === params.slug);
-  const artworks = jsonData.artworks.filter(
-    (artwork) => artwork.artist === artist.name
-  );
-
-  if (!artist) {
-    return {
-      notFound: true,
-    };
-  }
-
-  return { props: { artist, artworks } };
-}
-
 export default function ArtistPage({ artist, artworks }) {
   return (
-    <div>
+    <PageWrapper>
       <Head>
-        <title>{`${artworks.name} - Underground Gallery`}</title>
+        <title>{`${artist.name} - Underground Gallery`}</title>
       </Head>
       <Navbar />
-      <main>
+      <Container>
         <h2>{artist.name}</h2>
         <p>{artist.bio}</p>
         <h3>Artworks</h3>
@@ -74,7 +84,7 @@ export default function ArtistPage({ artist, artworks }) {
             </ArtworkCard>
           ))}
         </GridContainer>
-      </main>
-    </div>
+      </Container>
+    </PageWrapper>
   );
 }

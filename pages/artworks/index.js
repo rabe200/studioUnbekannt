@@ -1,7 +1,23 @@
-// pages/artworks/index.js
 import Head from "next/head";
-import Navbar from "@/components/Navbar";
+import Navbar from "../../components/Navbar";
 import styled from "styled-components";
+
+export async function getStaticProps() {
+  const jsonData = require("../../data.json"); // Adjust path as needed
+  return { props: { artworks: jsonData.artworks } };
+}
+
+const PageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+
+const Container = styled.main`
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+`;
 
 const GridContainer = styled.div`
   display: grid;
@@ -17,20 +33,14 @@ const ArtworkCard = styled.div`
   text-align: center;
 `;
 
-export async function getStaticProps() {
-  const jsonData = require("../../data.json"); // Adjust path as needed
-
-  return { props: { artworks: jsonData.artworks } };
-}
-
 export default function ArtworksPage({ artworks }) {
   return (
-    <div>
+    <PageWrapper>
       <Head>
         <title>Artworks - Underground Gallery</title>
       </Head>
       <Navbar />
-      <main>
+      <Container>
         <h2>Artworks</h2>
         <GridContainer>
           {artworks.map((artwork) => (
@@ -50,7 +60,7 @@ export default function ArtworksPage({ artworks }) {
             </ArtworkCard>
           ))}
         </GridContainer>
-      </main>
-    </div>
+      </Container>
+    </PageWrapper>
   );
 }

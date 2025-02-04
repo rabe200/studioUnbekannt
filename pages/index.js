@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Navbar from "../components/Navbar";
+import Navbar from "@/components/Navbar";
 import styled from "styled-components";
 
 const Container = styled.main`

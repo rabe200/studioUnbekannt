@@ -1,6 +1,6 @@
-// pages/exhibitions/[slug].js
 import Head from "next/head";
-import Navbar from "@/components/Navbar";
+import Navbar from "../../components/Navbar";
+import styled from "styled-components";
 import fs from "fs";
 import path from "path";
 
@@ -15,7 +15,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const jsonData = require("../../data.json"); // Adjust path as needed
-
   const exhibition = jsonData.exhibitions.find(
     (exhibition) => exhibition.slug === params.slug
   );
@@ -29,22 +28,32 @@ export async function getStaticProps({ params }) {
   return { props: { exhibition } };
 }
 
+const PageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+
+const Container = styled.main`
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+`;
+
 export default function ExhibitionPage({ exhibition }) {
   return (
-    <div>
+    <PageWrapper>
       <Head>
-        <Head>
-          <title>{`${exhibition.title} - Underground Gallery`}</title>
-        </Head>
+        <title>{`${exhibition.title} - Underground Gallery`}</title>
       </Head>
       <Navbar />
-      <main>
+      <Container>
         <h2>{exhibition.title}</h2>
         <p>{exhibition.description}</p>
         <p>
           <strong>Date:</strong> {exhibition.date}
         </p>
-      </main>
-    </div>
+      </Container>
+    </PageWrapper>
   );
 }
