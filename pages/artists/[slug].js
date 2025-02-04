@@ -69,6 +69,7 @@ export default function ArtistPage({ artist, artworks, exhibitions }) {
         />
       )}
       <p>{artist.bio}</p>
+      <p>{artist.statement}</p>
 
       {/* Render Instagram handle if available */}
       {artist.instagram && (
