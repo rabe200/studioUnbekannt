@@ -2,69 +2,204 @@
   "exhibitions": [
     {
       "id": "1",
-      "title": "Hidden Narratives",
-      "slug": "hidden-narratives",
-      "description": "An exhibition exploring unseen stories.",
-      "date": "2025-06-10"
-    },
-    {
-      "id": "2",
-      "title": "Shadow and Light",
-      "slug": "shadow-and-light",
-      "description": "The interplay between darkness and illumination.",
-      "date": "2025-04-22"
+      "title": "KNOSPEN UND BETON",
+      "slug": "knospen-und-beton",
+      "description": "A group exhibition showcasing the works of emerging painters and sculptors in Berlin.",
+      "date": "2025-09-15",
+      "vernissage": "14.3.25, 17 - 23 Uhr",
+      "duration": "12.-23.3.25, 12 - 22 Uhr",
+      "location": "Pappelalle 69, 10437 Prenzlauer Berg"
     }
   ],
   "artists": [
     {
       "id": "1",
-      "name": "Alex Noir",
-      "slug": "alex-noir",
-      "bio": "Alex Noir is a contemporary artist known for his dark and surreal compositions.",
-      "artworks": ["101", "102"]
+      "name": "Ame Dgd",
+      "slug": "ame-dgd",
+      "bio": "A Berlin-based painter exploring abstract and figurative forms.",
+      "instagram": "@ame.dgd.art",
+      "exhibition": "knospen-und-beton"
     },
     {
       "id": "2",
-      "name": "Mia Solis",
-      "slug": "mia-solis",
-      "bio": "Mia Solis blends light and shadow to create immersive dreamlike landscapes.",
-      "artworks": ["103"]
+      "name": "Marco Wachsmuth",
+      "slug": "marco-wachsmuth",
+      "bio": "Marco Wachsmuth experiments with textures and colors to create expressive paintings.",
+      "instagram": "@marco_wachsmuth",
+      "exhibition": "knospen-und-beton"
     },
     {
       "id": "3",
-      "name": "Jordan Vega",
-      "slug": "jordan-vega",
-      "bio": "Jordan Vega experiments with textures and digital distortions to push artistic boundaries.",
-      "artworks": ["104", "105"]
+      "name": "Helena Leeners",
+      "slug": "helena-leeners",
+      "bio": "Helena Leeners blends movement and color in her vivid compositions.",
+      "instagram": "@run.to.moon",
+      "exhibition": "knospen-und-beton"
+    },
+    {
+      "id": "4",
+      "name": "Rachel Haase",
+      "slug": "rachel-haase",
+      "bio": "Rachel Haase’s works explore surreal and dreamy landscapes.",
+      "instagram": "@rachelhaaze93",
+      "exhibition": "knospen-und-beton"
+    },
+    {
+      "id": "5",
+      "name": "Chuuu",
+      "slug": "chuuu",
+      "bio": "Chuuu creates playful and evocative visual narratives through her paintings.",
+      "instagram": "@chuuu_painter",
+      "exhibition": "knospen-und-beton"
+    },
+    {
+      "id": "6",
+      "name": "Gina Donner",
+      "slug": "gina-donner",
+      "bio": "Gina Donner focuses on abstract and intuitive painting techniques.",
+      "instagram": "@gina.donner",
+      "exhibition": "knospen-und-beton"
+    },
+    {
+      "id": "7",
+      "name": "Lucas Fabian Oliviero",
+      "slug": "lucas-fabian-oliviero",
+      "bio": "Lucas Fabian Oliviero combines classical and modern techniques in his works.",
+      "instagram": "@lufo.art",
+      "exhibition": "knospen-und-beton"
+    },
+    {
+      "id": "8",
+      "name": "Christian",
+      "slug": "christian",
+      "bio": "Christian, known as Rabentinte, specializes in naive, surreal, and mystical art.",
+      "instagram": "@rabentinte",
+      "exhibition": "knospen-und-beton"
+    },
+    {
+      "id": "9",
+      "name": "Vera Menold",
+      "slug": "vera-menold",
+      "bio": "Vera Menold’s paintings depict dreamlike visions and abstract figures.",
+      "instagram": "@vera.menold",
+      "exhibition": "knospen-und-beton"
+    },
+    {
+      "id": "10",
+      "name": "Achim",
+      "slug": "achim",
+      "bio": "Achim crafts sculptures that blend industrial and organic elements.",
+      "instagram": "@achimsaar",
+      "exhibition": "knospen-und-beton"
+    },
+    {
+      "id": "11",
+      "name": "Till Kräusel",
+      "slug": "till-kraeusel",
+      "bio": "Till Kräusel specializes in sculptural works that explore materiality and form.",
+      "instagram": "@aeu_art_and_design",
+      "exhibition": "knospen-und-beton"
     }
   ],
   "artworks": [
     {
-      "id": "101",
-      "name": "Echoes of the Past",
-      "slug": "echoes-of-the-past",
-      "artist": "Alex Noir",
-      "year": 2024,
-      "technique": "Oil on Canvas",
-      "price": "€2,500"
+      "id": "1",
+      "name": "To be announced",
+      "slug": "to-be-announced-1",
+      "artist": "Ame Dgd",
+      "year": "2025",
+      "technique": "TBA",
+      "price": "TBA"
     },
     {
-      "id": "102",
-      "name": "Concrete Dreams",
-      "slug": "concrete-dreams",
-      "artist": "Alex Noir",
-      "year": 2023,
-      "technique": "Mixed Media",
-      "price": "€1,800"
+      "id": "2",
+      "name": "To be announced",
+      "slug": "to-be-announced-2",
+      "artist": "Marco Wachsmuth",
+      "year": "2025",
+      "technique": "TBA",
+      "price": "TBA"
     },
     {
-      "id": "103",
-      "name": "Concrete Fumble",
-      "slug": "concrete-fumble",
-      "artist": "Roger Morris",
-      "year": 2024,
-      "technique": "Mixed Media",
-      "price": "€1,800"
+      "id": "3",
+      "name": "To be announced",
+      "slug": "to-be-announced-3",
+      "artist": "Helena Leeners",
+      "year": "2025",
+      "technique": "TBA",
+      "price": "TBA"
+    },
+    {
+      "id": "4",
+      "name": "To be announced",
+      "slug": "to-be-announced-4",
+      "artist": "Rachel Haase",
+      "year": "2025",
+      "technique": "TBA",
+      "price": "TBA"
+    },
+    {
+      "id": "5",
+      "name": "To be announced",
+      "slug": "to-be-announced-5",
+      "artist": "Chuuu",
+      "year": "2025",
+      "technique": "TBA",
+      "price": "TBA"
+    },
+    {
+      "id": "6",
+      "name": "To be announced",
+      "slug": "to-be-announced-6",
+      "artist": "Gina Donner",
+      "year": "2025",
+      "technique": "TBA",
+      "price": "TBA"
+    },
+    {
+      "id": "7",
+      "name": "To be announced",
+      "slug": "to-be-announced-7",
+      "artist": "Lucas Fabian Oliviero",
+      "year": "2025",
+      "technique": "TBA",
+      "price": "TBA"
+    },
+    {
+      "id": "8",
+      "name": "To be announced",
+      "slug": "to-be-announced-8",
+      "artist": "Christian",
+      "year": "2025",
+      "technique": "TBA",
+      "price": "TBA"
+    },
+    {
+      "id": "9",
+      "name": "To be announced",
+      "slug": "to-be-announced-9",
+      "artist": "Vera Menold",
+      "year": "2025",
+      "technique": "TBA",
+      "price": "TBA"
+    },
+    {
+      "id": "10",
+      "name": "To be announced",
+      "slug": "to-be-announced-10",
+      "artist": "Achim",
+      "year": "2025",
+      "technique": "TBA",
+      "price": "TBA"
+    },
+    {
+      "id": "11",
+      "name": "To be announced",
+      "slug": "to-be-announced-11",
+      "artist": "Till",
+      "year": "2025",
+      "technique": "TBA",
+      "price": "TBA"
     }
   ]
 }
